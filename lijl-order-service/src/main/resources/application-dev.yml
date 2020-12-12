@@ -1,0 +1,29 @@
+server:
+  port: 1910
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+  endpoint:
+    health:
+      show-details: ALWAYS
+
+logging:
+  file:
+    name: "logs/order-service.log"
+spring:
+  application:
+    name: order-service
+  boot:
+    admin:
+      client:
+        url: http://localhost:8080
+        username: root
+        password: root
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    username: lijl85
+    password: root
+    url: jdbc:mysql://localhost:3306/order?useSSL=false&serverTimezone=UTC
+

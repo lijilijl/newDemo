@@ -1,0 +1,5 @@
+spring:
+  application:
+    name: biz-service
+server:
+  port: 8080

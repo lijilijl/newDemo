@@ -1,0 +1,25 @@
+spring:
+  application:
+    name: client-service
+  boot:
+    admin:
+      client:
+        url: http://localhost:8080
+        username: root
+        password: root
+
+server:
+  port: 1999
+  servlet:
+    context-path: /api-ui
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+  endpoint:
+    health:
+      show-details: ALWAYS
+logging:
+  file:
+    name: "log/api-ui.log"

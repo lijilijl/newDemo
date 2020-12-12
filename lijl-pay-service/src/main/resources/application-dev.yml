@@ -1,0 +1,10 @@
+spring:
+  application:
+    name: pay-service
+  datasource:
+    url: jdbc:mysql://localhost:3306/pay?useSSL=false&serverTimezone=UTC
+    username: lijl85
+    password: root
+    driver-class-name: com.mysql.cj.jdbc.Driver
+server:
+  port: 1911
