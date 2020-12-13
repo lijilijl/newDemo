@@ -25,11 +25,13 @@
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
 	<groupId>com.demo</groupId>
-	<artifactId>lijl</artifactId>
+	<artifactId>lijl-demo</artifactId>
 	<packaging>pom</packaging>
 	<version>1.0.0</version>
 	<properties>
-		<spring-boot.version>2.3.6.RELEASE</spring-boot.version>
+		<java.version>1.8</java.version>
+		<spring-boot-admin.version>2.2.3</spring-boot-admin.version>
+		<spring-boot.version>2.3.1.RELEASE</spring-boot.version>
 		<spring-cloud.version>Hoxton.SR9</spring-cloud.version>
 		<spring-cloud-alibaba.version>2.2.3.RELEASE</spring-cloud-alibaba.version>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
@@ -38,25 +40,41 @@
 		<spring-boot-admin.version>2.3.1</spring-boot-admin.version>
 		<hutool.version>5.5.1</hutool.version>
 		<mybatis-plus.version>3.4.1</mybatis-plus.version>
-		<dynamic-ds.version>3.2.0</dynamic-ds.version>
 		<captcha.version>2.2.0</captcha.version>
 		<velocity.version>1.7</velocity.version>
-		<jasypt.version>2.1.0</jasypt.version>
-		<swagger.fox.version>3.0.0</swagger.fox.version>
-		<xxl-job.version>2.2.0</xxl-job.version>
-	</properties>
+        <jasypt.version>2.1.0</jasypt.version>
+        <swagger.fox.version>3.0.0</swagger.fox.version>
+        <lombok.version>1.18.4</lombok.version>
+        <project.build.finalName>test-demo</project.build.finalName>
+    </properties>
 
 
 	<modules>
-		<module>admin-client-server</module>
 		<module>lijl-biz-seata-service</module>
 		<module>lijl-order-service</module>
 		<module>lijl-pay-service</module>
+		<module>admin-client-server</module>
 	</modules>
 
+	<dependencyManagement>
+		<dependencies>
+			<dependency>
+				<groupId>de.codecentric</groupId>
+				<artifactId>spring-boot-admin-dependencies</artifactId>
+				<version>${spring-boot-admin.version}</version>
+				<type>pom</type>
+				<scope>import</scope>
+			</dependency>
+			<dependency>
+				<groupId>org.projectlombok</groupId>
+				<artifactId>lombok</artifactId>
+				<version>${lombok.version}</version>
+			</dependency>
+		</dependencies>
+	</dependencyManagement>
 
 	<build>
-		<finalName>${project.name}</finalName>
+		<finalName>demo</finalName>
 		<resources>
 			<resource>
 				<directory>src/main/resources</directory>
