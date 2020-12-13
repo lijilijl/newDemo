@@ -44,7 +44,7 @@
 		<velocity.version>1.7</velocity.version>
         <jasypt.version>2.1.0</jasypt.version>
         <swagger.fox.version>3.0.0</swagger.fox.version>
-        <lombok.version>1.18.4</lombok.version>
+        <lombok.version>1.18.10</lombok.version>
         <project.build.finalName>test-demo</project.build.finalName>
     </properties>
 
